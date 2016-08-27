@@ -17,6 +17,9 @@ STATIC_IP=(10.244.231.10 10.244.232.10 10.244.233.10)
 DISK=gfs-cluster1-brick
 SIZE=10GB
 
+# VM boot disk size in GBs
+BOOTDISK_SIZE=60
+
 # VM type
 MACHINE_TYPE=g1-small
 

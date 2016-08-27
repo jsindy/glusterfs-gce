@@ -17,7 +17,7 @@ done
 for (( i=1; i<=${COUNT}; i++ ))
 do
     gcloud compute instances create ${SERVER}-${i} --image=$IMAGE --image-project=ubuntu-os-cloud \
-     --boot-disk-type pd-standard --boot-disk-size 50 --zone ${REGION}-${ZONES[$i-1]} \
+     --boot-disk-type pd-standard --boot-disk-size ${BOOTDISK_SIZE} --zone ${REGION}-${ZONES[$i-1]} \
      --machine-type=${MACHINE_TYPE} \
      --can-ip-forward --tags ${SERVER},${SERVER}-${i} \
      --disk name=${DISK}1-${i} \
