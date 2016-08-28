@@ -53,8 +53,8 @@ Example
 
 ```
 kubectl create -f glusterfs-endpoints.json
-# Make sure to update the static ip
 ./create_volume.sh vol1
+# Make sure to update the static ip, and DB ip, password etc in wordpress.yaml
 kubectl create -f examples/wordpress.yaml
 ```
 
