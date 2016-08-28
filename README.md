@@ -20,7 +20,7 @@ Before continuing, please make sure you have:
 $ git clone https://github.com/rimusz/glusterfs-gce
 $ cd glusterfs-gce/cluster
 ````
-* Edit the `cluster/settings` file and set `PROJECT, REGION and ZONES`, the rest of settings in this file are probably fine, but can be adjusted if need be.
+* Edit the `cluster/settings` file and set `PROJECT, REGION, ZONES, SIZE and BOOTDISK_SIZE`, the rest of settings in this file are probably fine, but can be adjusted if need be.
 
 ### Bootstrap the cluster
 ```
@@ -48,6 +48,13 @@ $ ./create_volume.sh VOLUME_NAME
 ##### At this point, your GlusterFS cluster should be fully set up and operational
 
 You can check Kubernetes GlusterFS [example](https://github.com/kubernetes/kubernetes/tree/release-1.2/examples/glusterfs/) how to use GlusterFS with Kubernetes.
+
+Example
+
+kubectl create -f glusterfs-endpoints.json
+
+Make sure to update the static ip
+kubectl create -f examples/wordpress.yaml
 
 
 ### Extras
